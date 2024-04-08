@@ -20,7 +20,7 @@ public class Equipo extends Participante{
 
 	public void listarJugadoresPorGoles() {
         Collections.sort(jugadores, Comparator.comparing(Jugador::getGoles).reversed());
-        System.out.println("Equipo: " + nombre);
+        System.out.println("| EQUIPO: " + nombre + " |");
         for (Jugador jugador : jugadores) {
             System.out.println(jugador.getNombre() + ": " + jugador.getGoles() + " goles");
         }

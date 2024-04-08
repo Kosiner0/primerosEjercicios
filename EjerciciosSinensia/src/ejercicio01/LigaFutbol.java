@@ -16,7 +16,7 @@ public class LigaFutbol {
 	}
 	
 	public void listarPartidos() {
-		System.out.println("-LISTA DE PARTIDOS-");
+		System.out.println("\n-LISTA DE PARTIDOS-");
 		for(Partido partido : partidos) {
 			partido.mostrarResultado();
 		}
@@ -26,8 +26,8 @@ public class LigaFutbol {
 		
 		LigaFutbol liga = new LigaFutbol();
 		
-		Equipo Barça = new Equipo("Barça");
-		Equipo Madrid = new Equipo("Madrid");
+		Equipo Barça = new Equipo("F.C.Barcelona");
+		Equipo Madrid = new Equipo("Real Madrid");
 		
 		Jugador messi = new Jugador("Leo Messi");
 		Jugador neymar = new Jugador("Neymar Jr.");
@@ -66,6 +66,7 @@ public class LigaFutbol {
 		
 		//Muestra la informacion de los equipos
 		Barça.mostrarInformacion();
+		System.out.println();
 		Madrid.mostrarInformacion();
 				
 		//Muestra la lista de los partidos jugados 
