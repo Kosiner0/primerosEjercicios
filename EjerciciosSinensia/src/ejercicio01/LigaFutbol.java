@@ -29,24 +29,49 @@ public class LigaFutbol {
 		Equipo Barça = new Equipo("Barça");
 		Equipo Madrid = new Equipo("Madrid");
 		
-		Barça.agregarJugador(new Jugador("Leo Messi"));
-		Barça.agregarJugador(new Jugador("Neymar Jr."));
-		Barça.agregarJugador(new Jugador("Luis Suarez"));
+		Jugador messi = new Jugador("Leo Messi");
+		Jugador neymar = new Jugador("Neymar Jr.");
+		Jugador suarez = new Jugador("Luis Suarez");
+		Jugador cr7 = new Jugador("Critiano Ronaldo");
+		Jugador bale = new Jugador("Gareth Bale");
+		Jugador benzema = new Jugador("Karim Benzema");
 		
-		Madrid.agregarJugador(new Jugador("Critiano Ronaldo"));
-		Madrid.agregarJugador(new Jugador("Gareth Bale"));
-		Madrid.agregarJugador(new Jugador("Karim Benzema"));
+		Barça.agregarJugador(messi);
+		Barça.agregarJugador(neymar);
+		Barça.agregarJugador(suarez);
 		
+		Madrid.agregarJugador(cr7);
+		Madrid.agregarJugador(bale);
+		Madrid.agregarJugador(benzema);
+		
+		liga.agregarPartido(new Partido(Barça, Madrid, 3, 2));
+		messi.marcarGol(2);
+		suarez.marcarGol(1);
+		bale.marcarGol(2);
+		
+		liga.agregarPartido(new Partido(Barça, Madrid, 1, 3));
+		neymar.marcarGol(1);
+		cr7.marcarGol(2);
+		benzema.marcarGol(1);
+		
+		liga.agregarPartido(new Partido(Barça, Madrid, 2, 2));
+		messi.marcarGol(1);
+		neymar.marcarGol(1);
+		cr7.marcarGol(1);
+		benzema.marcarGol(1);
+		
+		liga.agregarPartido(new Partido(Barça, Madrid, 1, 1));
+		suarez.marcarGol(1);
+		bale.marcarGol(1);
+		
+		//Muestra la informacion de los equipos
 		Barça.mostrarInformacion();
 		Madrid.mostrarInformacion();
-		
-		liga.agregarPartido(new Partido(Barça, Madrid, 3, 2)); 
-		liga.agregarPartido(new Partido(Barça, Madrid, 1, 3));
-		liga.agregarPartido(new Partido(Barça, Madrid, 2, 2));
-		liga.agregarPartido(new Partido(Barça, Madrid, 1, 4));
-		
+				
+		//Muestra la lista de los partidos jugados 
 		liga.listarPartidos();
 
+		
 	}
 
 }

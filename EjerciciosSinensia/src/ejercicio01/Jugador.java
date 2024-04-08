@@ -12,8 +12,8 @@ class Jugador extends Participante {
         return goles;
     }
 
-    public void marcarGol() {
-        goles++;
+    public void marcarGol(int numGoles) {
+        this.goles += numGoles;
     }
 
     @Override
