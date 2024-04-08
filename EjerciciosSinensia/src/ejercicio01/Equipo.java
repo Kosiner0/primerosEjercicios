@@ -1,47 +1,35 @@
 package ejercicio01;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
-public class Equipo {
+public class Equipo extends Participante{
 	
 	protected List<Jugador> jugadores;
-	protected String nombre;
-	protected int puntos;
 	
-	public Equipo(List<Jugador> jugadores, String nombre, int puntos) {
-		super();
-		this.jugadores = jugadores;
-		this.nombre = nombre;
-		this.puntos = puntos;
+	public Equipo(String nombre) {
+		super(nombre);
+		this.jugadores = new ArrayList<>();
 	}
 
-	public List<Jugador> getJugadores() {
-		return jugadores;
-	}
+	 public void agregarJugador(Jugador jugador) {
+	        jugadores.add(jugador);
+	 }
 
-	public void setJugadores(List<Jugador> jugadores) {
-		this.jugadores = jugadores;
-	}
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public int getPuntos() {
-		return puntos;
-	}
-
-	public void setPuntos(int puntos) {
-		this.puntos = puntos;
-	}
-
+	public void listarJugadoresPorGoles() {
+        Collections.sort(jugadores, Comparator.comparing(Jugador::getGoles).reversed());
+        System.out.println("Equipo: " + nombre);
+        for (Jugador jugador : jugadores) {
+            System.out.println(jugador.getNombre() + ": " + jugador.getGoles() + " goles");
+        }
+    }
+	
 	@Override
-	public String toString() {
-		return "Equipo [jugadores=" + jugadores + ", nombre=" + nombre + ", puntos=" + puntos + "]";
+	void mostrarInformacion() {
+		listarJugadoresPorGoles();
+		
 	}
 	
 
