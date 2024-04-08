@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class Equipo extends Participante {
+public class Equipo extends Participante implements Comparable<Equipo>{
 	
 	protected List<Jugador> jugadores;
 	private int partidosGanados;
@@ -36,10 +36,13 @@ public class Equipo extends Participante {
         }
     }
 	
+	public int compareTo(Equipo otroEquipo) {
+		return Integer.compare(otroEquipo.getPartidosGanados(), this.getPartidosGanados());
+	}
+	
 	@Override
 	void mostrarInformacion() {
 		listarJugadoresPorGoles();
 	}
 	
-
 }
