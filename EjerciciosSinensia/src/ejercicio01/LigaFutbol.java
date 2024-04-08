@@ -64,14 +64,14 @@ public class LigaFutbol {
 		suarez.marcarGol(1);
 		bale.marcarGol(1);
 		
-		//Muestra la informacion de los equipos
+		//Muestra la informacion de los equipos y la tabla de clasificacion de los equipos en funcion de los partidos ganados
 		Barça.mostrarInformacion();
 		System.out.println();
 		Madrid.mostrarInformacion();
-				
+		
 		//Muestra la lista de los partidos jugados 
 		liga.listarPartidos();
-
+		
 		
 	}
 
