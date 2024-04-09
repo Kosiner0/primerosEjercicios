@@ -18,7 +18,6 @@ abstract class Productos {
 		return codigo;
 	}
 
-
 	public String getModelo() {
 		return modelo;
 	}

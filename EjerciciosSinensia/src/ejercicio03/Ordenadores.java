@@ -13,6 +13,11 @@ public class Ordenadores extends Productos{
 		this.cantidadMemoria = cantidadMemoria;
 		this.capacidadDiscoDuro = capacidadDiscoDuro;
 	}
+	
+	public Ordenadores(int codigo, String modelo, double precio, int cantidad) {
+		super(codigo, modelo, precio, cantidad);
+		
+	}
 
 	public String getProcesador() {
 		return procesador;
@@ -40,10 +45,18 @@ public class Ordenadores extends Productos{
 
 	@Override
 	void mostrarInformacion() {
-		System.out.println("Ordenadores [procesador=" + procesador + ", cantidadMemoria=" + cantidadMemoria
-				+ ", capacidadDiscoDuro=" + capacidadDiscoDuro + ", codigo=" + codigo + ", modelo=" + modelo
+		System.out.println("Ordenadores [código=" + codigo + ", modelo=" + modelo
 				+ ", precio=" + precio + ", cantidad=" + cantidad + "]");
 		
 	}
+
+	@Override
+	public String toString() {
+		return "Ordenadores [procesador=" + procesador + ", cantidadMemoria=" + cantidadMemoria
+				+ ", capacidadDiscoDuro=" + capacidadDiscoDuro + ", codigo=" + codigo + ", modelo=" + modelo
+				+ ", precio=" + precio + ", cantidad=" + cantidad + "]";
+	}
+	
+	
 	
 }
