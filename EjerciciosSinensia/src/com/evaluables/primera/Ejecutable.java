@@ -1,5 +1,6 @@
 package com.evaluables.primera;
 
+
 public class Ejecutable {
 
 	public static void main(String[] args) {
@@ -14,8 +15,10 @@ public class Ejecutable {
         miCoche.avanzar(9000); 
         miCoche.retroceder(1); 
         miCoche.parar(); // Parar el vehículo
-	
-        Camion camion = new Camion("9876ZXY", 10);
+        System.out.println("\n");
+        System.out.println("" + miCoche.toString());
+        
+        Camion camion = new Camion("Naranja", "9876ZXY", 10);
         
         System.out.println("\n-CAMIÓN-");
         camion.conducir();
@@ -28,6 +31,8 @@ public class Ejecutable {
         camion.parar();
         System.out.println(camion.getTacometro());
         
+        System.out.println("\n");
+        System.out.println("" + camion.toString());
 	}
 
 }
