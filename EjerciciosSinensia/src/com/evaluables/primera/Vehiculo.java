@@ -45,7 +45,9 @@ public class Vehiculo {
 	public double calcularVelocidad() {
 		return distanciaAvanzada/tiempoDeViaje;
 	}
-
 	
+	
+
+
 	
 }

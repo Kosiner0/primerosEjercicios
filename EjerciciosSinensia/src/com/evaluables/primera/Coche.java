@@ -59,7 +59,7 @@ public class Coche extends Vehiculo implements Conducible{
 	public void retroceder(int distanciaKm) {
 		// TODO Auto-generated method stub
 		System.out.println("El coche retrocede " + distanciaKm + " km.");
-		distanciaAvanzada -= distanciaKm;
+		distanciaAvanzada += distanciaKm;
 	}
 
 	@Override

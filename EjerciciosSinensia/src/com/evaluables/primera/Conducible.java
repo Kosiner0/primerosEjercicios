@@ -7,5 +7,4 @@ public interface Conducible {
 	void retroceder(int distanciaKm);
 	void parar();
 	
-	
 }
