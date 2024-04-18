@@ -85,7 +85,8 @@ public class Camion extends Vehiculo implements Conducible{
 		vehiculoArrancado = false;
 	
 		double velocidad = calcularVelocidad();
-		System.out.println("El camión ha recorrido " + String.format("%.0f", distanciaAvanzada) + " KM en " + String.format("%.0f", tiempoDeViaje) + " horas, a una velocidad de " + String.format("%.0f", velocidad) + " Km/h.");
+		System.out.println("El camión ha recorrido " + String.format("%.0f", distanciaAvanzada) + " KM en " + String.format("%.0f", tiempoDeViaje) 
+		+ " horas, a una velocidad de " + String.format("%.0f", velocidad) + " Km/h.");
 	
 	}
 	
