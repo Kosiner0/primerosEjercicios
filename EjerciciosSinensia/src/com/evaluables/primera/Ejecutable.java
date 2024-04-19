@@ -1,6 +1,5 @@
 package com.evaluables.primera;
 
-
 public class Ejecutable {
 
 	public static void main(String[] args) {

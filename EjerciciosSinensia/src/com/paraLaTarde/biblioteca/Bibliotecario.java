@@ -1,4 +1,4 @@
-package com.porLaTarde.biblioteca;
+package com.paraLaTarde.biblioteca;
 
 public interface Bibliotecario {
 
