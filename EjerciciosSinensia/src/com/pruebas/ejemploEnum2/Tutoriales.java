@@ -1,4 +1,4 @@
-package com.pruebas.enum2;
+package com.pruebas.ejemploEnum2;
 
 public enum Tutoriales {
 
