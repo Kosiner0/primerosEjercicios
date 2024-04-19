@@ -13,11 +13,27 @@ public class Cuenta {
             this.estado = estado;
     }
 
+    public double getSaldo() {
+        return saldo;
+    }
     
     public double reintegro(double cantidad) throws Exception {
-             if (cantidad <0) throw new PersonalizadaExcepcion("LA cantidad no puede ser negativa");
-              // tendremos que lanzar una excepción personalizada
-    
-            return saldo;
+             if (cantidad <0) { // tendremos que lanzar una excepción personalizada
+            	 throw new PersonalizadaExcepcion("La cantidad no puede ser negativa");
+            	 
+             }else if(EstadoCuenta.BLOQUEADA != null){
+            	 throw new PersonalizadaExcepcion("La cuenta está bloqueada, contacte con el banco.");
+            	 
+             }else {
+            	 return saldo -= cantidad;
+             }
     }
+    
+    public double retirarDinero(double cantidad) throws Exception{
+    	
+    	return 0; 
+    }
+    
+    
+    
 }
